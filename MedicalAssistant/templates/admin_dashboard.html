@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Admin Analytics Dashboard</h2>
+</div>
+
+<div class="card">
+  <h3>ROC Curve</h3>
+  {{ roc|safe }}
+</div>
+
+<div class="card">
+  <h3>Feature Importance</h3>
+  {{ fi|safe }}
+</div>
+
+<div class="card">
+  <h3>Model Comparison</h3>
+  {{ cmp|safe }}
+</div>
+
+<div class="card">
+  <h3>Population Risk Pie Chart</h3>
+  {{ pie|safe }}
+</div>
+
+<div class="card">
+  <h3>Correlation Heatmap</h3>
+  {{ corr|safe }}
+</div>
+
+<div class="card">
+  <h3>Risk Trend</h3>
+  {{ trend|safe }}
+</div>
+{% endblock %}

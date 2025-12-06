@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Sizin diabet riskiniz: {{ prob }}% (XGBoost modeli ilə)</h2>
+  <div>{{ gauge|safe }}</div>
+</div>
+
+<div class="card">
+  <h3>Fərdi SHAP izahı</h3>
+  <div>{{ shap_html|safe }}</div>
+</div>
+
+<div class="card">
+  <a href="{% url 'form' %}">Yenidən hesabla</a> |
+  <a href="{% url 'dashboard' %}">Admin Dashboard</a>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Diabet Risk Qiymətləndirmə Formu</h2>
+  <form method="post" action="{% url 'result' %}">
+    {% csrf_token %}
+    <div class="grid">
+      <div>
+        <label>Yaş</label>
+        {{ form.age }}
+      </div>
+      <div>
+        <label>BMI</label>
+        {{ form.bmi }}
+      </div>
+      <div>
+        <label>Şəkər səviyyəsi (Glucose)</label>
+        {{ form.glucose }}
+      </div>
+      <div>
+        <label>Qan təzyiqi (BP)</label>
+        {{ form.bp }}
+      </div>
+      <div>
+        <label>Ailə tarixi</label>
+        {{ form.family }}
+      </div>
+      <div>
+        <label>Fiziki aktivlik</label>
+        {{ form.exercise }}
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <button type="submit">Riski Hesabla</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
